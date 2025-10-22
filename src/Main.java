@@ -9,6 +9,7 @@ public class Main {
         /*ApiClient api = new ApiClient();
         System.out.println(api.fetchQuestions(5, "easy", "multiple"));
 */
+        System.out.println("CHI VUOLE ESSERE MATURATO?");
         Scanner scanner = new Scanner(System.in);
 
         ApiClient client = new ApiClient();
@@ -17,11 +18,6 @@ public class Main {
         String playerName = scanner.nextLine();
 
 
-        System.out.print("Inserisci il numero di domande da prendere: ");
-        int amount = scanner.nextInt();
-
-        System.out.print("\n");
-        client.fetchData(amount, "easy","multiple");
 
         int correctAnswers = 0;
         boolean used5050 = false;
@@ -42,7 +38,16 @@ public class Main {
             System.out.println("Errore durante il salvataggio delle statistiche: " + e.getMessage());
         }
 
+/*
+        System.out.print("Inserisci il numero di domande da prendere: ");
+        int amount = scanner.nextInt();
 
+        System.out.print("\n");
+        client.fetchData(amount, "easy","multiple");
+*/
+        client.fetchData(5, "easy","multiple");
+        client.fetchData(3, "medium","multiple");
+        client.fetchData(2, "hard","multiple");
 
     }
 }
