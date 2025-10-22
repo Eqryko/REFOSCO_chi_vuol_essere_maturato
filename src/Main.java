@@ -15,5 +15,11 @@ public class Main {
         client.fetchData(amount, "easy","multiple");
 
 
+        String playerName;
+        int correctAnswers = 0;
+        boolean used5050 = false;
+        boolean usedAudience = false;
+
+
     }
 }
