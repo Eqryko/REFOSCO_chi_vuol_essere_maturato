@@ -8,6 +8,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         ApiClient client = new ApiClient();
+
+        System.out.print("Inserisci nome: ");
+        String playerName = scanner.nextLine();
+
+
         System.out.print("Inserisci il numero di domande da prendere: ");
         int amount = scanner.nextInt();
 
@@ -15,11 +20,17 @@ public class Main {
         client.fetchData(amount, "easy","multiple");
 
 
-        String playerName;
+
         int correctAnswers = 0;
         boolean used5050 = false;
         boolean usedAudience = false;
 
+        PlayerStatistics stats = new PlayerStatistics(
+          playerName,
+          correctAnswers,
+          used5050,
+          usedAudience
+        );
 
     }
 }
